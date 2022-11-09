@@ -56,7 +56,11 @@ def send_help(client: pyrogram.client.Client, message: pyrogram.types.messages_a
     app.send_message(message.chat.id, START_TXT, reply_to_message_id=message.id, disable_web_page_preview=True)
 
 
-
+# links
+@app.on_message(filters.text)
+def receive(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
+    bypass = threading.Thread(target=lambda:loopthread(message),daemon=True)
+    bypass.start()
 
 
 
