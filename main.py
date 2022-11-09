@@ -10,48 +10,11 @@ import threading
 from texts import START_TXT
 from bypasser import shortlist
 
-
 # bot
 bot_token = os.environ.get("TOKEN", "")
 api_hash = os.environ.get("HASH", "") 
 api_id = os.environ.get("ID", "")
-app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token) 
-
-bipinkrish
-/
-Link-Bypasser-Bot
-Public
-Code
-Issues
-2
-Pull requests
-Actions
-Projects
-Security
-Insights
-Link-Bypasser-Bot/main.py
-@bipinkrish
-bipinkrish Error fix
- 1 contributor
-94 lines (76 sloc)  3.6 KB
-import pyrogram
-from pyrogram import Client
-from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
-import bypasser
-import os
-import ddl
-import requests
-import threading
-from texts import HELP_TEXT
-from bypasser import ddllist
-
-
-# bot
-bot_token = os.environ.get("TOKEN", "")
-api_hash = os.environ.get("HASH", "") 
-api_id = os.environ.get("ID", "")
-app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)  
+app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bo
 
 
 # loop thread
