@@ -6,7 +6,7 @@ import bypasser
 import os
 import requests
 import threading
-from texts import START_TXT
+from text import START_TXT
 from bypasser import shortlist
 
 # bot
