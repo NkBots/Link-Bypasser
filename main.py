@@ -14,7 +14,7 @@ from bypasser import shortlist
 bot_token = os.environ.get("TOKEN", "")
 api_hash = os.environ.get("HASH", "") 
 api_id = os.environ.get("ID", "")
-app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bo
+app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token) 
 
 
 # loop thread
