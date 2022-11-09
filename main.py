@@ -7,7 +7,7 @@ import os
 import ddl
 import requests
 import threading
-from texts import
+from texts import START_TXT
 from bypasser import shortlist
 
 
