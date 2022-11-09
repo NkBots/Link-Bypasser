@@ -16,6 +16,8 @@ from asyncio import sleep as asleep
 import PyBypass
 import os
 
+shortlist = ["mdisk.me"
+
 
 # mdisk
 
