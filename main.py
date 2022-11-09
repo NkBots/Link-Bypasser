@@ -26,7 +26,7 @@ def loopthread(message):
     if len(urls) == 0:
         return
 
-    if bypasser.ispresent(ddllist,urls[0]):
+    if bypasser.ispresent(shortlist,urls[0]):
         msg = app.send_message(message.chat.id, "⚡ __generating...__", reply_to_message_id=message.id)
     else:
         if urls[0] in "https://olamovies" or urls[0] in "https://psa.pm/":
