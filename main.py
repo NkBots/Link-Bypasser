@@ -7,7 +7,7 @@ import os
 import requests
 import threading
 from text import START_TXT
-from bypasser import shortlist
+from bypasser import ddllist
 
 # bot
 bot_token = os.environ.get("TOKEN", "")
@@ -25,7 +25,7 @@ def loopthread(message):
     if len(urls) == 0:
         return
 
-    if bypasser.ispresent(shortlist,urls[0]):
+    if bypasser.ispresent(ddllist,urls[0]):
         msg = app.send_message(message.chat.id, "⚡ __generating...__", reply_to_message_id=message.id)
     else:
         if urls[0] in "https://olamovies" or urls[0] in "https://psa.pm/":
@@ -35,7 +35,7 @@ def loopthread(message):
 
     link = ""
     for ele in urls:
-        if bypasser.ispresent(shortlist,ele):
+        if bypasser.ispresent(ddllist,ele):
             try: temp = ddl.direct_link_generator(ele)
             except Exception as e: temp = "**Error**: " + str(e)
         else:    
