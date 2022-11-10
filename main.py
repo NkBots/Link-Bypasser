@@ -35,7 +35,7 @@ def loopthread(message):
 
     link = ""
     for ele in urls:
-        if bypasser.ispresent(ddllist,ele):
+        if bypasser.ispresent(shortlist,ele):
             try: temp = ddl.direct_link_generator(ele)
             except Exception as e: temp = "**Error**: " + str(e)
         else:    
