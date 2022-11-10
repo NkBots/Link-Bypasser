@@ -56,7 +56,6 @@ def droplink(url):
         return res["msg"]
 
 def droplink(url):
-url = open('1.txt', 'r').read()
 print("You Have Entered:")
 print(url)
 print("Checking Link!")
