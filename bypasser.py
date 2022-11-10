@@ -18,7 +18,6 @@ import os
 
 ddllist = ["mdisk.me", "droplink.co", "mdisk"]
 
-def a function named ispresent in bypasser.py
 
 # mdisk
 
