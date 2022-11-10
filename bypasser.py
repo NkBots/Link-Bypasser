@@ -16,7 +16,7 @@ from asyncio import sleep as asleep
 import PyBypass
 import os
 
-shortlist = ["mdisk.me", "droplink.co"]
+shortlist = ["mdisk.me", "droplink.co", "mdisk"]
 
 
 # mdisk
