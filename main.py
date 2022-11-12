@@ -17,28 +17,23 @@ app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
 
 
 
-# start command
-@app.on_message(filters.command(["start"]))
-def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-    app.send_message(message.chat.id, f"__👋 Hi **{message.from_user.mention}**, i am Link Bypasser Bot, just send me any supported links and i will you get you results.\nCheckout /help to Read More__",
-    
 @app.on_message(filters.command('mdisk'))
-def link_handler(bot, message):
+async def link_handler(bot, message):
  # link = message.matches[0].group(0)
   l = message.text.split(' ', 1)
 
   if len(l) == 1:
-        return message.reply_text('Send Me Any Mdisk Link Like this `/mdisk mdisk-link`')
+        return await message.reply_text('Send Me Any Mdisk Link Like this `/mdisk mdisk-link`')
   link = l[1]
-
+  #mess = await message.reply_text("**Bypassing...⏳**",quote=True)
 
   if 'mdisk' in link:
      try:
-        mess = message.reply_text("**Bypassing...⏳**",quote=True)
+        mess = await message.reply_text("**Bypassing...⏳**",quote=True)
         short_link = await mdisk(link)
-        mess.edit_text(f"**Bypassed URL** : {short_link} \n\n © {message.from_user.mention}", disable_web_page_preview=True)
+        await mess.edit_text(f"**Bypassed URL** : {short_link} \n\n © {message.from_user.mention}", disable_web_page_preview=True)
      except Exception as e:
-        mess.edit_text(f"**Error** : {e}")
+        await mess.edit_text(f"**Error** : {e}")
 
 
 
