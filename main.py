@@ -4,11 +4,8 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
 import bypasser
 import os
-import ddl
 import requests
-import threading
-from texts import HELP_TEXT
-from bypasser import ddllist
+import threading 
 
 
 # bot
