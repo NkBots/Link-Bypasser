@@ -89,7 +89,6 @@ def mdisk(url):
             return textx
 
 
-url = "" #@param {type:"string"}
 # ==============================================
 
 def droplink(url):
