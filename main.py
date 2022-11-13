@@ -88,7 +88,7 @@ def mdisk(url):
             textx = f"The Content is Deleted."
             return textx
 
-url = "http://" #@param {type:"string"}
+url = "https://droplink.co" #@param {type:"string"}
 # ==============================================
 
 def droplink(url):
