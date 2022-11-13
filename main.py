@@ -6,6 +6,7 @@ import os
 import requests
 import threading 
 import re
+import cloudscraper
 
 # bot
 bot_token = os.environ.get("TOKEN", "")
