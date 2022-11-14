@@ -48,10 +48,10 @@ async def link_handler(bot, message):
   link = l[1]
   #mess = await message.reply_text("**Bypassing...⏳**",quote=True)
 
-  if 'bypass' in link:
+  if 'dulink' in link:
      try:
         mess = await message.reply_text("**Bypassing...⏳**",quote=True)
-        short_link = bypass(link)
+        short_link = dulink(link)
         await mess.edit_text(f"**Bypassed URL** : {short_link} \n\n © {message.from_user.mention}", disable_web_page_preview=True)
      except Exception as e:
         await mess.edit_text(f"**Error** : {e}")
@@ -97,7 +97,7 @@ url = "https://dulink.in/ehkcP"  #@param {type:"string"}
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-def bypass(url):
+def dulink(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
    
     DOMAIN = "https://cac.teckypress.in/"
