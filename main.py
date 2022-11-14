@@ -48,10 +48,10 @@ async def link_handler(bot, message):
   link = l[1]
   #mess = await message.reply_text("**Bypassing...⏳**",quote=True)
 
-  if 'https' in link:
+  if 'bypass' in link:
      try:
         mess = await message.reply_text("**Bypassing...⏳**",quote=True)
-        short_link = (link)
+        short_link = bypass(link)
         await mess.edit_text(f"**Bypassed URL** : {short_link} \n\n © {message.from_user.mention}", disable_web_page_preview=True)
      except Exception as e:
         await mess.edit_text(f"**Error** : {e}")
