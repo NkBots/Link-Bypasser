@@ -48,7 +48,7 @@ async def link_handler(bot, message):
   link = l[1]
   #mess = await message.reply_text("**Bypassing...⏳**",quote=True)
 
-  if '' in link:
+  if 'https' in link:
      try:
         mess = await message.reply_text("**Bypassing...⏳**",quote=True)
         short_link = (link)
