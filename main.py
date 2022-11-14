@@ -7,6 +7,7 @@ import requests
 import threading 
 import re
 import cloudscraper
+from bs4 import BeautifulSoup
 
 # bot
 bot_token = os.environ.get("TOKEN", "")
