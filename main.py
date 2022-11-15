@@ -134,7 +134,7 @@ print(dulink(url))
 
 
 
-@app.on_message(filters.command('bypass'))
+@app.on_message(filters.command('bypass1'))
 async def link_handler(bot, message):
  # link = message.matches[0].group(0)
   l = message.text.split(' ', 1)
@@ -193,10 +193,10 @@ async def link_handler(bot, message):
   link = l[1]
   #mess = await message.reply_text("**Bypassing...⏳**",quote=True)
 
-  if 'bitly' in link:
+  if 'bit' in link:
      try:
         mess = await message.reply_text("**Bypassing...⏳**",quote=True)
-        short_link = bitly(link)
+        short_link = bit(link)
         await mess.edit_text(f"**Bypassed URL** : {short_link} \n\n © {message.from_user.mention}", disable_web_page_preview=True)
      except Exception as e:
         await mess.edit_text(f"**Error** : {e}")
