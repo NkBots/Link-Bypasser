@@ -144,16 +144,16 @@ async def link_handler(bot, message):
   link = l[1]
   #mess = await message.reply_text("**Bypassing...⏳**",quote=True)
 
-  if 'gplink' in link:
+  if 'gplinks' in link:
      try:
         mess = await message.reply_text("**Bypassing...⏳**",quote=True)
-        short_link = gplink(link)
+        short_link = gplinks(link)
         await mess.edit_text(f"**Bypassed URL** : {short_link} \n\n © {message.from_user.mention}", disable_web_page_preview=True)
      except Exception as e:
         await mess.edit_text(f"**Error** : {e}")
 
 
-def gplink(url: str) -> str:
+def gplinks(url: str) -> str:
 	
 	url = url[:-1] if url[-1] == '/' else url
 	token = url.split("/")[-1]
