@@ -152,6 +152,7 @@ async def link_handler(bot, message):
      except Exception as e:
         await mess.edit_text(f"**Error** : {e}")
 
+Url = "https://gplinks.co/DDdozuB"
 
 def gplinks(url: str) -> str:
 	
@@ -180,6 +181,34 @@ def gplinks(url: str) -> str:
 	return bypassed_url
 
 
+url = "https://bit.ly/3gco4QU"
+
+@app.on_message(filters.command('bypass'))
+async def link_handler(bot, message):
+ # link = message.matches[0].group(0)
+  l = message.text.split(' ', 1)
+
+  if len(l) == 1:
+        return await message.reply_text('Send Me Any Link Like this `/bypass link`')
+  link = l[1]
+  #mess = await message.reply_text("**Bypassing...⏳**",quote=True)
+
+  if 'bitly' in link:
+     try:
+        mess = await message.reply_text("**Bypassing...⏳**",quote=True)
+        short_link = bitly(link)
+        await mess.edit_text(f"**Bypassed URL** : {short_link} \n\n © {message.from_user.mention}", disable_web_page_preview=True)
+     except Exception as e:
+        await mess.edit_text(f"**Error** : {e}")
+
+
+def bitly_bypass(bitly_url: str) -> str:
+	response = requests.get(bitly_url).url
+	return response
+
+
+
+
 @app.on_message(filters.command('bypass'))
 async def link_handler(bot, message):
  # link = message.matches[0].group(0)
@@ -199,24 +228,6 @@ async def link_handler(bot, message):
         await mess.edit_text(f"**Error** : {e}")
 
 
-
-@app.on_message(filters.command('bypass'))
-async def link_handler(bot, message):
- # link = message.matches[0].group(0)
-  l = message.text.split(' ', 1)
-
-  if len(l) == 1:
-        return await message.reply_text('Send Me Any Link Like this `/bypass link`')
-  link = l[1]
-  #mess = await message.reply_text("**Bypassing...⏳**",quote=True)
-
-  if 'gplinks' in link:
-     try:
-        mess = await message.reply_text("**Bypassing...⏳**",quote=True)
-        short_link = gplinks(link)
-        await mess.edit_text(f"**Bypassed URL** : {short_link} \n\n © {message.from_user.mention}", disable_web_page_preview=True)
-     except Exception as e:
-        await mess.edit_text(f"**Error** : {e}")
 
 
 
