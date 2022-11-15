@@ -8,6 +8,4 @@ lxml
 lk21
 cfscrape
 PyBypass
-datetime
-time
 asyncio
